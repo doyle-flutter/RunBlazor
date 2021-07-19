@@ -1,0 +1,35 @@
+body[b-s9asd6rjvu] {
+}
+
+div.james > p[b-s9asd6rjvu] {
+    color: red;
+}
+div.nullItem[b-s9asd6rjvu] {
+    padding: 20px;
+}
+div.nullItem > p[b-s9asd6rjvu] {
+    color: grey;
+}
+div.todoItem[b-s9asd6rjvu] {
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid grey;
+}
+div.todoItem[b-s9asd6rjvu] {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: grey;
+}
+div.todoItem > div.title[b-s9asd6rjvu] {
+    flex: 2;
+}
+div.todoItem > div.title > p[b-s9asd6rjvu] {
+    margin: 0;
+    color: white;
+    font-weight:bold
+}
+div.todoItem > div.action[b-s9asd6rjvu] {
+    flex: 1
+}

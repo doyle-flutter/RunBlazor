@@ -1,0 +1,52 @@
+﻿@page "/todo"
+
+<div>
+    @* Shared Component & Params *@
+
+    <TodoTitle title="TODO" />
+
+    <div class="james">
+        <p>JamesssssDev</p>
+    </div>
+
+    <div>
+        <input type="text" @bind="@value" />
+        <button @onclick="submit">click</button>
+    </div>
+
+    <div>
+        @if (todoList.Count == 0)
+        {
+            <div class="nullItem"><p>Empty Item</p></div>
+        }
+        else
+        {
+            foreach (string v in todoList)
+            {
+                <div class="todoItem">
+                    <div class="title"><p>@v</p></div>
+                    <div class="action"><button @onclick="() => itemRemove(todoList.IndexOf(v))">X</button></div>
+                </div>
+            }
+        }
+    </div>
+
+</div>
+
+
+@code {
+    private string value = "";
+    private List<string> todoList = new List<string>();
+
+    private void submit() {
+        if (string.IsNullOrWhiteSpace(value)) {
+            return;
+        }
+        todoList.Add(value);
+        value = "";
+    }
+
+    private void itemRemove(int index) {
+        todoList.RemoveAt(index);
+    }
+}
